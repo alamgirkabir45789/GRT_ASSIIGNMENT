@@ -11,7 +11,7 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace GRT_ASSIIGNMENT.Controllers
 {
-    [Authorize]
+    
     [Route("api/[controller]")]
     [ApiController]
     public class ApplicationUserController : ControllerBase

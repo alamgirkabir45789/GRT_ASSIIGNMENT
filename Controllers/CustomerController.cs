@@ -8,9 +8,11 @@ using Microsoft.EntityFrameworkCore;
 using GRT_ASSIIGNMENT.Data;
 using GRT_ASSIIGNMENT.Models;
 using GRT_ASSIIGNMENT.Repositories;
+using Microsoft.AspNetCore.Authorization;
 
 namespace GRT_ASSIIGNMENT.Controllers
 {
+    
     [Route("api/[controller]")]
     [ApiController]
     public class CustomerController : ControllerBase
@@ -30,6 +32,7 @@ namespace GRT_ASSIIGNMENT.Controllers
             return Ok(customer);
         }
 
+        [Authorize]
         // GET: api/Customer/5
         [HttpGet("{id}")]
         public  ActionResult GetCustomer(int id)
